@@ -14,7 +14,7 @@ app.use('/user', controllers.userController);
 
 dbConnection
   .authenticate()
-  .then(() => dbConnection.sync({ force: true }))
+  .then(() => dbConnection.sync())
   .then(() => {
     app.listen(3000, () => {
       console.log(`[Server]: App is lstening on 3000.`);
